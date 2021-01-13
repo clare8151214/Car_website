@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="loginpage.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <title>賣書網</title>
+    <script type="text/javascript">
+      function check_data()
+      {
+        if (document.myForm.account.value.length == 0)
+          alert("帳號欄位不可以空白哦！");
+        else if (document.myForm.password.value.length == 0)
+          alert("密碼欄位不可以空白哦！");
+        else 
+          myForm.submit();
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row no-gutter">
+        <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+        <div class="col-md-8 col-lg-6">
+          <div class="login d-flex align-items-center py-5">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-9 col-lg-8 mx-auto">
+                  <h3 class="login-heading mb-4">快樂書城</h3>
+                  <form action="checkpwd.php" method="post" name="myForm">
+                    <div class="form-label-group">
+                      <input name="account" id="account" type="text" class="form-control" placeholder="Email address" required autofocus>
+                      <label for="account">account</label>
+                    </div>
+    
+                    <div class="form-label-group">
+                      <input name="password" id="password" type="password" class="form-control" placeholder="Password" required>
+                      <label for="password">password</label>
+                    </div>
+    
+        
+                    <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit" onclick="check_data()">Sign in</button>
+                    <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="reset">Reset</button>
+                    <div class="text-center">
+                    <a href="join.html">加入會員</a>　
+                    <a href="search_pwd.html">Forgot password?</a></div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
